@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: forum-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: forum
+  template:
+    metadata:
+      labels:
+        app: forum
+    spec:
+      containers:
+        - name: forum
+          image: your-dockerhub-username/forum-pipe:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: forum-storage
+              mountPath: /var/www/html/storage
+      volumes:
+        - name: forum-storage
+          persistentVolumeClaim:
+            claimName: forum-nfs-pvc
