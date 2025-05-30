@@ -5,7 +5,7 @@ metadata:
   namespace: forum
 spec:
   capacity:
-    storage: 2Gi
+    storage: 1Gi
   accessModes:
     - ReadWriteMany
   nfs:
@@ -23,4 +23,4 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Gi
