@@ -20,16 +20,25 @@ spec:
           ports:
             - containerPort: 3306
           envFrom:
-            - secretRef:
-                name: forum-app-secret
+          - configMapRef:
+              name: app-config
+          - secretRef:
+              name: app-secret
           volumeMounts:
-            - name: mysql-storage
-              mountPath: /var/lib/mysql
-  volumeClaimTemplates:
-    - metadata:
-        name: mysql-storage
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: 1Gi
+          - name: mysql-storage
+            mountPath: /var/lib/mysql
+        volumes:
+        - name: mysql-storage
+          persistentVolumeClaim:
+            claimName: mysql-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  namespace: forum
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: mysql
