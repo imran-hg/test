@@ -11,7 +11,7 @@ spec:
   nfs:
     server: 192.168.187.126
     path: /srv/nfs/stat
-  persistentVolumeReclaimPolicy: Retain
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
