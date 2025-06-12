@@ -4,9 +4,5 @@ metadata:
   name: forum-app-config
   namespace: forum
 data:
-  APP_ENV: production
-  APP_DEBUG: "false"
-  LOG_CHANNEL: stack
-  CACHE_DRIVER: redis
-  SESSION_DRIVER: redis
-  QUEUE_CONNECTION: sync
+  STAT_URL: "/stat/"
+  STAT_ROOT: "/app/stat/stat_root"
