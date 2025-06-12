@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: forum-app-config
+  name: app-config
   namespace: forum
 data:
   STAT_URL: "/stat/"
