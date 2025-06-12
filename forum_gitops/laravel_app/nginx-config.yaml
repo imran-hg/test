@@ -11,7 +11,7 @@ data:
         root /var/www/html/public;
 
         location / {
-            try_files $uri $uri/ /index.php?$query_string;
+            try_files $uri $uri/ /index.php?$query_string;  # Forward requests to Laravel's index.php
         }
 
         location ~ \.php$ {
@@ -21,7 +21,7 @@ data:
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             fastcgi_param PATH_INFO $fastcgi_path_info;
         }
-
+# Optional: Block access to .htaccess files
         location ~ /\.ht {
             deny all;
         }
