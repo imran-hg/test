@@ -17,8 +17,6 @@ spec:
       containers:
         - name: mysql
           image: mysql:5.7
-          persistentVolumeClaim:
-            claimName: mysql-pvc
           ports:
             - containerPort: 3306
           envFrom:
