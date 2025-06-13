@@ -39,4 +39,4 @@ data:
             fastcgi_param PATH_INFO $fastcgi_path_info;
           }
         }
-   }
+    }
