@@ -39,8 +39,8 @@ data:
             fastcgi_param PATH_INFO $fastcgi_path_info;
         }
 # Optional: Block access to .htaccess files
-        location ~ /\.ht {
-            deny all;
-        }
+    #    location ~ /\.ht {
+     #       deny all;
+      #  }
     }
 }
