@@ -26,7 +26,7 @@ spec:
               name: app-secret
           volumeMounts:
           - name: mysql-storage
-            mountPath: /var/lib/mysql
+            mountPath: /var/lib/mysql/data
       volumes:
       - name: mysql-storage
         persistentVolumeClaim:
