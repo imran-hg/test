@@ -11,7 +11,7 @@ spec:
   nfs:
     #path: /srv/nfs/mysql
     server: 192.168.187.126  #NFS Server IP
-    path: /srv/nfs/mysql
+    path: /nfs/mysql
 
 ---
 apiVersion: v1
