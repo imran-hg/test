@@ -10,7 +10,7 @@ spec:
     - ReadWriteMany
   nfs:
     server: 192.168.187.126
-    path: /srv/nfs/stat
+    path: /nfs/stat
 
 ---
 apiVersion: v1
