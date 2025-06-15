@@ -9,8 +9,8 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 192.168.187.126
-    path: /nfs/mysql
+    path: /srv/nfs/mysql
+    server: 192.168.187.126  #NFS Server IP
 
 ---
 apiVersion: v1
